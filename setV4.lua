@@ -14,7 +14,7 @@ local Setting = {
     ['Close Ui'] = false,
     ['White Screen'] = true, 
     ['FPS Booster'] = true,
-    ['Destroy Ui'] = true -- ไม่ใช้ Ui 
+    ['Destroy Ui'] = false -- ไม่ใช้ Ui 
 }
 print('8989')
 return Setting

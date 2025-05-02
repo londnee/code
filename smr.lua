@@ -1,20 +1,150 @@
-([[
-                   This script has been licensed using Luarmor
-                Luarmor v3.5, Lua whitelisting system by @fedaral#0
-                           https://luarmor.net/
+if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+local name_m = game.Players.LocalPlayer.Name 
+print('yeseews')
+if name_m == 'thailand_AsH' then
+    -- Admin
+    _G.Settings = {
+        ['Max Level (Prestige)'] = 160,
+        -- รีเบิด
+        ['Prestige'] = {
+            ['Memories'] = { -- ใส่ชื่อการ์ดที่ต้องการ (โอกาสได้99%)
+                [1] = "Afterimages",
+                [2] = "Flashstep",
+                [3] = "Assassin"
+            }   
+        },
+        -- ซื้อน้ำยา EXP X2
+        ['Boost EXP X2'] = { 
+            ['Buy'] = '2x XP Boost [30m]', 
+            ['Use'] = '2x XP Boost [30m]'
+        },
+        -- เลือกด่าน
+        ['Mission'] = {
+            ['Auto Join Mission (Boost)'] = true, -- เข้าด่านที่มีบูส เพื่อให้ได้ EXP +50%
+            ['Auto Next Difficulty'] = true, -- ไปด่านต่อไปเมื่อแรงค์ถึง
+            ['Auto Leave (When Win)'] = 2 -- ออกจากด่านเมื่อชนะครบ 2รอบ
+        },
+        -- อัพแรงค์
+        ['Upgrades'] = {
+            "ODM_Damage",
+            "Blade_Durability",
+            "Crit_Chance",
+            "Crit_Chance",
+            "Crit_Damage",
+            "ODM_Control",
+            "ODM_Gas",
+            "ODM_Range",
+            "ODM_Speed"
+        },
+        -- ฟามไททัน
+        ['Auto Attack Titan'] = true, -- ตีไททัน
+        ['Auto Repair Weapon'] = true, -- ซ่อมอาวุธ
+        ['Auto Fill Gas'] = true, -- เติมแก๊ส + เติมดาบ
+        -- เพิ่มความลื่น
+        ['FPS Booster'] = true, -- ภาพกาก
+        ['Close Gui'] = false, -- ปิดหน้า GUI
+        ['White Screen'] = true -- จอขาวลด RAM
+    }
+else
+    -- Admin
+    _G.Settings = {
+        ['Max Level (Prestige)'] = 200,
+        -- รีเบิด
+        ['Prestige'] = {
+            ['Memories'] = { -- ใส่ชื่อการ์ดที่ต้องการ (โอกาสได้99%)
+                [1] = "Apotheosis",
+                [2] = "Overslash",
+                [3] = "Thanatophobia",
+                [4] = "Gambler"
+            }
+        },
+        -- ซื้อน้ำยา EXP X2
+        ['Boost EXP X2'] = { 
+            ['Buy'] = '2x XP Boost [30m]', 
+            ['Use'] = '2x XP Boost [30m]'
+        },
+        -- เลือกด่าน
+        ['Mission'] = {
+            ['Auto Join Mission (Boost)'] = true, -- เข้าด่านที่มีบูส เพื่อให้ได้ EXP +50%
+            ['Auto Next Difficulty'] = true, -- ไปด่านต่อไปเมื่อแรงค์ถึง
+            ['Auto Leave (When Win)'] = 2 -- ออกจากด่านเมื่อชนะครบ 2รอบ
+        },
+        -- อัพแรงค์
+        ['Upgrades'] = {
+            "ODM_Damage",
+            "Blade_Durability",
+            "Crit_Chance",
+            "Crit_Chance",
+            "Crit_Damage",
+            "ODM_Control",
+            "ODM_Gas",
+            "ODM_Range",
+            "ODM_Speed"
+        },
+        -- ฟามไททัน
+        ['Auto Attack Titan'] = true, -- ตีไททัน
+        ['Auto Repair Weapon'] = true, -- ซ่อมอาวุธ
+        ['Auto Fill Gas'] = true, -- เติมแก๊ส + เติมดาบ
+        -- เพิ่มความลื่น
+        ['FPS Booster'] = true, -- ภาพกาก
+        ['Close Gui'] = false, -- ปิดหน้า GUI
+        ['White Screen'] = true -- จอขาวลด RAM
+    }
+end
+script_key="RazCedFsLiYTRvNLSZkZFoMakqfiashp";
+setfpscap(10)
+queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/refs/heads/main/smr.lua"))()')
+if not game.Players.LocalPlayer.PlayerGui:FindFirstChild("SwitchHub") then
+    local player = game.Players.LocalPlayer
+    local switchHubGui = Instance.new("ScreenGui")
+    switchHubGui.Name = "SwitchHub"
+    switchHubGui.Parent = player:WaitForChild("PlayerGui") -- ตั้ง Parent เป็น PlayerGui
+    switchHubGui.DisplayOrder = 10 -- กำหนด DisplayOrder
+    switchHubGui.Enabled = true -- เปิดใช้งาน GUI
+    switchHubGui.IgnoreGuiInset = true -- ให้ GUI อยู่ในตำแหน่งบนสุด
+    switchHubGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling -- ตั้งค่า ZIndexBehavior
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fed2be135c061b074c5deabeb2949dae.lua"))()
+    Nexus_Version = 104
 
-       ____          _      
-      / ___|___   __| | ___ 
-     | |   / _ \ / _` |/ _ \
-     | |__| (_) | (_| |  __/
-      \____\___/ \__,_|\___|
-                            
+    local FileName, Success, Error, Function = 'ic3w0lf22.Nexus.lua'
 
-                                                     
-                 Script ID: d21c89612f7a911c400a7016cc3b0df9
+    if isfile and readfile and isfile(FileName) then -- Execute ASAP, update later.
+        Function, Error = loadstring(readfile(FileName), 'Nexus')
 
-            Please use the api.luarmor.net loadstring to load this script. (for your safety)
-          You can use https://luarmor.net/check to see if this script is verified & safe to run.
-]])
+        if Function then
+            Function()
 
-{(function(b)local c=debug.getmetatable(b)debug.setmetatable(b,{__call=function(d,e)debug.setmetatable(b,c)return function(b)b{'d21c89612f7a911c400a7016cc3b0df9',d}end end})end)''}(function(b)local b=b[1]local c=''local d=24915;local e=0;local f={}while e<966 do e=e+1;while e<605 and d%5260<2630 do e=e+1;d=(d-466)%41090;local b=e+d;if(d%3504)>1752 then d=(d-706)%30483;while e<313 and d%7102<3551 do e=e+1;d=(d*411)%43087;local b=e+d;if(d%14970)>7485 then d=(d*355)%41240;local b=76830;if not f[b]then f[b]=1;c=c..'.n'end elseif d%2~=0 then d=(d*316)%34377;local b=51374;if not f[b]then f[b]=1;c=c..'luarmor'end else d=(d*939)%2412;e=e+1;local b=67052;if not f[b]then f[b]=1 end end end elseif d%2~=0 then d=(d+986)%9320;while e<597 and d%3566<1783 do e=e+1;d=(d-950)%7147;local b=e+d;if(d%4020)<2010 then d=(d+826)%6247;local b=79206;if not f[b]then f[b]=1;c=c..'ht'end elseif d%2~=0 then d=(d+737)%14175;local b=51471;if not f[b]then f[b]=1;c=c..'tp'end else d=(d*705)%44808;e=e+1;local b=58695;if not f[b]then f[b]=1;c=c..'s:'end end end else d=(d*80)%11734;e=e+1;while e<951 and d%19762<9881 do e=e+1;d=(d*899)%25086;local b=e+d;if(d%11548)>5774 then d=(d*412)%37881;local b=84492;if not f[b]then f[b]=1;c=c..'//'end elseif d%2~=0 then d=(d-419)%22808;local b=94003;if not f[b]then f[b]=1;c=c..'ap'end else d=(d-851)%30011;e=e+1;local b=21386;if not f[b]then f[b]=1;c=c..'i.'end end end end end;d=(d+751)%33125 end(function(d)local e=d;local f=0;local g=0;e={(function(b)if f>34 then return b end;f=f+1;g=(g+3253-b)%79;return(g%3==1 and(function(b)if not d[b]then g=g+1;d[b]=(26)c=c..'il'end;return true end)'igRzv'and e[2](687+b))or(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(103)c=c..'.l'end;return true end)'TilxU'and e[3](b+101))or(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(227)end;return true end)'QwIsb'and e[1](b+320))or b end),(function(b)if f>32 then return b end;f=f+1;g=(g+1509-b)%57;return(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(139)c=c..'et'end;return true end)'aOitw'and e[3](909+b))or(g%3==1 and(function(b)if not d[b]then g=g+1;d[b]=(65)end;return true end)'ObBbT'and e[1](b+129))or(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(153)c=c..'ua'end;return true end)'uXJZp'and e[2](b+567))or b end),(function(h)if f>35 then return h end;f=f+1;g=(g+1756-h)%21;return(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(2)c=c..'/f'end;return true end)'bdEJm'and e[1](782+h))or(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(108)c=c..'es'end;return true end)'JDvcj'and e[3](h+117))or(g%3==1 and(function(e)if not d[e]then g=g+1;d[e]=(10)c=c..'/v3/l/'..b end;return true end)'tIFsS'and e[2](h+748))or h end)}e[2](8832)end){}loadstring(game:HttpGet(c)){}end)
+            if Nexus then Nexus:Connect() end
+        end
+    end
+
+    for i=1, 10 do
+        Success, Error = pcall(function()
+            local Response = (http_request or (syn and syn.request)) { Method = 'GET', Url = 'https://raw.githubusercontent.com/ic3w0lf22/Roblox-Account-Manager/master/RBX%20Alt%20Manager/Nexus/Nexus.lua' }
+
+            if not Response.Success then error(('HTTP Error %s'):format(Response.StatusCode)) end
+
+            Function, Error = loadstring(Response.Body, 'Nexus')
+
+            if not Function then error(Error) end
+
+            if isfile and not isfile(FileName) then
+                writefile(FileName, Response.Body)
+            end
+            
+            if not Nexus then -- Nexus was already ran earlier, this will update the existing file to the latest version instead of re-creating Nexus
+                Function()
+                Nexus:Connect()
+            end
+        end)
+        
+        if Success then break else task.wait(1) end
+    end
+
+    if not Success and Error then
+        (messagebox or print)(('Nexus encountered an error while launching!\n\n%s'):format(Error), 'Roblox Account Manager', 0)
+    end
+elseif game.Players.LocalPlayer.PlayerGui:FindFirstChild("SwitchHub") then
+    print('Task Bu')
+end
+-- Admin
